@@ -69,3 +69,10 @@ form {
 .navigate-link {
   color: #f90;
 }
+.error-message {
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: red;
+}

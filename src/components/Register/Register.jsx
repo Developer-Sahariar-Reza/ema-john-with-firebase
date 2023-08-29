@@ -1,12 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Register.css";
 import { Link } from "react-router-dom";
 
 const Register = () => {
+  const [error, setError] = useState("");
+
+  const handleSignUp = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    const confirm = form.confirm.value;
+    console.log(email, password, confirm);
+
+    if (password !== confirm) {
+      setError("Your Password didn't match");
+      return;
+    } else if (password.length < 6) {
+      setError("Password must be at least 6 character");
+      return;
+    }
+  };
   return (
     <div className="form-container">
       <h1 className="form-title">Sign Up</h1>
-      <form>
+      <form onSubmit={handleSignUp}>
         <div className="form-control">
           <label>Email:</label>
           <input
@@ -33,7 +51,7 @@ const Register = () => {
           <label>Confirm Password:</label>
           <input
             type="password"
-            name="password"
+            name="confirm"
             id=""
             placeholder="your password"
             required
@@ -49,6 +67,8 @@ const Register = () => {
           Login
         </Link>
       </p>
+
+      <p className="error-message">{error}</p>
     </div>
   );
 };
