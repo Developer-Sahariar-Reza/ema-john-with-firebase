@@ -1,18 +1,33 @@
 .header {
-    height: 80px;
-    background-color: #1C2B35;;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 100px;
-    padding-right: 100px;
+  height: 80px;
+  background-color: #1c2b35;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
-nav.header a{
-    text-decoration: none;
-    color: #FFFFFF;
-    margin-left: 30px;
+nav.header a {
+  text-decoration: none;
+  color: #ffffff;
+  margin-left: 30px;
 }
-nav.header a:hover{
-    color: orange;
+nav.header a:hover {
+  color: orange;
+}
+.user-name {
+  color: white;
+  font-size: 18px;
+  margin-right: 20px;
+}
+.log-out-btn {
+  padding: 20px;
+  border: 0;
+  border-radius: 8px;
+  background-color: orange;
+  transition: all 0.2s ease;
+}
+.log-out-btn:active {
+  transform: scale(0.96);
 }
