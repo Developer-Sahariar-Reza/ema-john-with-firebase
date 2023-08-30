@@ -22,11 +22,13 @@ nav.header a:hover {
   margin-right: 20px;
 }
 .log-out-btn {
-  padding: 20px;
+  padding: 15px;
   border: 0;
   border-radius: 8px;
   background-color: orange;
   transition: all 0.2s ease;
+  font-size: 18px;
+  font-weight: bold;
 }
 .log-out-btn:active {
   transform: scale(0.96);
